@@ -807,7 +807,7 @@
                    '<a class="ui-state-default ' +
                    (hour == inst.hours ? 'ui-state-active' : '') +
                    '">' +
-                   displayHour.toString() +
+                   displayHour.toString() + (showPeriod? " " + (hour >= 12 ? "PM" : "AM") : "") +
                    '</a></td>';
             }
             else {
@@ -816,7 +816,7 @@
 		                '<span class="ui-state-default ui-state-disabled ' +
 		                (hour == inst.hours ? ' ui-state-active ' : ' ') +
 		                '">' +
-		                displayHour.toString() +
+		                displayHour.toString() + (showPeriod? " " + (hour >= 12 ? "PM" : "AM") : "") +
 		                '</span>' +
 		            '</td>';
             }
